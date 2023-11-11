@@ -1,0 +1,12 @@
+ele=list(map(int,input().split()))
+li=[]
+for i in range(len(ele)):
+    flag=True
+    for j in range(i+1,len(ele)):
+        if ele[i]<ele[j]:
+            flag=False
+            break
+    if flag==True:
+        li.append(ele[i])
+for i in li:
+    print(i,end=' ')
