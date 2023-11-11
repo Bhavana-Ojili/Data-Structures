@@ -1,0 +1,15 @@
+s1=input()
+s2=input()
+max=[]
+for i in range(len(s1)):
+    for j in range(i+1,len(s1)+1):
+        if s1[i:j] not in max:
+            if len(s1[i:j])<len(s1):
+                max.append(s1[i:j])
+sub='a'
+for k in max:
+    if k in s2:
+        if len(k)>len(sub):
+            sub=' '
+            sub+=k
+print(sub)
