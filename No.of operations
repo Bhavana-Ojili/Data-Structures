@@ -1,0 +1,30 @@
+s=input()
+n=input()
+count=0
+new=' '
+dele=0
+if len(s)>len(n):
+    for i in range(len(s)):
+        if s[i] not in n:
+            new+=s[i]
+            count+=1
+        else:
+            new+=s[i]
+    print('insertions:',count)
+elif len(n)>len(s):
+    for i in range(len(n)):
+        if n[i] not in s:
+            dele+=1
+        else:
+            new+=n[i]
+    print('deletions:',dele)
+else:
+    for i in range(len(s)):
+        if s[i] not in n:
+            new+=s[i]
+            count+=1
+        else:
+            new+=s[i]
+    print('substitutions',count)
+            
+    
