@@ -1,0 +1,14 @@
+string Anagram
+
+
+s1=input()
+s2=input()
+anagram=True
+if len(s1)==len(s2):
+    for i in s1:
+        if i not in s2:
+            anagram=False
+if(anagram):
+    print("anagram")
+else:
+    print("not an anagram")
