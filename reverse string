@@ -1,0 +1,15 @@
+t=int(input())
+li=[]
+for i in range(t):
+    s=input().split(' ')
+    l=0
+    r=len(s)-1
+    while(l<r):
+        temp=s[l]
+        s[l]=s[r]
+        s[r]=temp
+        l=l+1
+        r=r-1
+    li.append(s)
+for i in li:
+    print((' ').join(i))
