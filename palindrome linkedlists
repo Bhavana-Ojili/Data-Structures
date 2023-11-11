@@ -1,0 +1,62 @@
+class node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class link:
+    def __init__(self):
+        self.head = None
+
+    def insert(self, values):
+        for i in values:
+            new = node(i)
+            if self.head is None:
+                self.head = new
+            else:
+                cur = self.head
+                while cur.next is not None:
+                    cur = cur.next
+                cur.next = new
+
+    def lis(self):
+        li1 = []
+        cur = self.head
+        while cur is not None:
+            li1.append(cur.data)
+            cur = cur.next
+        return li1
+
+    def rev(self):
+        cur = self.head
+        prev = None
+        while cur is not None:
+            t = cur.next
+            cur.next = prev
+            prev = cur
+            cur = t
+        return prev
+
+    def palin(self):
+        li1 = self.lis()
+        li2 = []
+        c = self.rev()
+        while c is not None:
+            li2.append(c.data)
+            c = c.next
+        i = 0
+        while i < len(li1):
+            if li1[i] != li2[i]:
+                return False
+            i = i + 1
+        return True
+
+n = list(map(int, input().split()))
+li = link()
+li.insert(n)
+m = li.palin()
+if m:
+    print("palindrome")
+else:
+    print("not a palindrome")
+
+    
