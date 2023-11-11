@@ -1,0 +1,15 @@
+t=int(input())
+li=[]
+for i in range(t):
+    s=int(input())
+    a1=list(map(int,input().split()))
+    g=int(input())
+    for j in range(s):
+        for k in range(j+1,s):
+            if(a1[j]+a1[k])==g:
+                li.append([j,k])
+                break
+for i in li:
+    for j in i:
+        print(j,end=' ')
+    print('\n')
