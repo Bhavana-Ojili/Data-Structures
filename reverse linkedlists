@@ -1,0 +1,40 @@
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class linkedli:
+    def __init__(self):
+        self.head=None
+    def insert(self,values):
+        for i in values:
+            new=node(i)
+            if self.head is None:
+                self.head=new
+            else:
+                cur=self.head
+                while(cur.next!=None):
+                    cur=cur.next
+                cur.next=new
+    def rev(self):
+        cur=self.head
+        prev=None
+        while(cur!=None):
+            t=cur.next
+            cur.next=prev
+            prev=cur
+            cur=t
+        return prev
+    def printli(self):
+        cur=self.head
+        while(cur!=None):
+            print(cur.data,end=' ')
+            cur=cur.next
+values=list(map(int,input().split()))
+li=linkedli()
+li.insert(values)
+li.printli()
+cur=li.rev()
+print("\n")
+while cur!=None:
+    print(cur.data,end=' ')
+    cur=cur.next
