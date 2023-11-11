@@ -1,0 +1,4 @@
+n=input()
+s=input()
+if s in n:
+   print(n.index(s))
