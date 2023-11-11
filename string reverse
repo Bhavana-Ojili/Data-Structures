@@ -1,0 +1,5 @@
+n=input()
+s=' '
+for i in range(len(n)):
+    s+=n[len(n)-(i+1)]
+print(s)
