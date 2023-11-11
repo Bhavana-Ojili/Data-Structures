@@ -1,0 +1,19 @@
+arr=list(map(int,input().split()))
+m=0
+li=[]
+for i in range(0,len(arr)):
+      
+    for j in range(i+1,len(arr)+1):
+        if i+1<=len(arr):
+            li.append(arr[i:j])
+print(li)
+for d in li:
+    s=0
+    if len(d)!=len(arr):
+        for k in range(len(d)):
+            s=s+d[k]
+            if m<s:
+                li1=[]
+                m=s
+                li1=d
+print(li1)
