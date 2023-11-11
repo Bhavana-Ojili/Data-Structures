@@ -1,0 +1,13 @@
+n=input()
+pali=True
+l=0
+r=len(n)-1
+while l<r:
+    if n[l]!=n[r]:
+        pali=False
+    l+=1
+    r-=1
+if (pali):
+    print("palindrome")
+else:
+    print("not a pali")
