@@ -1,0 +1,13 @@
+n=input()
+s=' '
+count=1
+for i in range(0,len(n)):
+    if i+1<len(n):
+        if n[i]==n[i+1]:
+            count+=1
+        else:
+            s+=n[i]
+            s+=str(count)
+            count=1
+s+=n[-1]+str(count)
+print(s)
