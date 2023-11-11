@@ -1,0 +1,7 @@
+arr=list(map(int,input().split()))
+n=int(input())
+li=[]
+li.extend(arr[n+1:len(arr)])
+li.extend(arr[0:n+1])
+    
+print(li)
