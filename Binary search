@@ -1,0 +1,13 @@
+arr=list(map(int,input().split()))
+n=int(input())
+l=0
+r=len(arr)-1
+while l<=r:
+    mid=(l+r)//2
+    if n<arr[mid]:
+        r=mid-1
+    elif n>arr[mid]:
+        l=mid+1
+    else:
+        print("element",arr[mid],"indedx:",mid)
+        break
