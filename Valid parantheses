@@ -1,0 +1,15 @@
+s=input()
+li=['(',')']
+if s.count('(')==s.count(')'):
+    print("Balanced")
+else:
+    print("Not Balanced")
+if s.count('(')>s.count(')'):
+    for i in range(s.count('(')-s.count(')')):
+        s+=')'
+elif s.count(')')>s.count('('):
+    for i in range(s.count(')')-s.count('(')):
+        s+='('
+for i in range(len(s)):
+    print('('*i,')'*i)
+print(s)
