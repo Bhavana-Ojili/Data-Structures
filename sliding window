@@ -1,0 +1,11 @@
+li=list(map(int,input().split()))
+k=int(input())
+sum1=0
+for i in range(k):
+    sum1+=li[i]
+max1=sum1
+for i in range(k,len(li)):
+    sum1=sum1+li[i]-li[i-k]
+    if max1<sum1:
+        max1=sum1
+print(max1)
