@@ -1,13 +1,10 @@
 n=int(input())
 sum1=0
-temp=n
-sum2=0
 while n>0:
     rem=n%10
     sum1=sum1+rem
     n=n//10
-for i in range(len(str(sum1))):
-    rem=sum1%10
-    sum2=sum2+rem
-    sum1=sum1//10
-print(sum2)
+    while n==0 and sum1>9:
+        n=sum1
+        sum1=0
+print(sum1)
