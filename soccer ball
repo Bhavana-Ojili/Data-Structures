@@ -1,0 +1,9 @@
+size=int(input())
+stack=[]
+for i in range(size):
+    n=input().split(' ')
+    if n[0]=='p':
+        stack.append(n[1])
+    elif n[0]=='b':
+        stack.append(stack[-2])
+print(stack[-1])
