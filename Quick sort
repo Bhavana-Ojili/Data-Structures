@@ -1,0 +1,18 @@
+def quick(arr,s,e):
+    if (e-s+1)<=1:
+        return arr
+    pi=arr[e]
+    left=s
+    for i in range(s,e):
+        if arr[i]<pi:
+            temp=arr[i]
+            arr[i]=arr[left]
+            arr[left]=temp
+            left+=1
+    arr[e]=arr[left]
+    arr[left]=pi
+    quick(arr,s,left-1)
+    quick(arr,left+1,e)
+    return arr
+arr=list(map(int,input().split()))
+print(quick(arr,0,len(arr)-1))
