@@ -1,0 +1,12 @@
+n=int(input())
+p=list(map(int,input().split()))
+cap=int(input())
+bus=0
+su=0
+i=0
+for i in range(n):
+    su+=p[i]
+    if su>cap:
+        bus+=1
+        su=p[i]
+print(bus)
